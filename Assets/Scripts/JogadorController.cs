@@ -19,6 +19,8 @@ public class JogadorController : MonoBehaviour
     public AudioClip somMoeda;
     private AudioSource audioSource;
 
+    public Animator animator;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -53,15 +55,21 @@ public class JogadorController : MonoBehaviour
         // Pulo
         if (controller.isGrounded)
         {
-            direcao.y = -1f; // Garante que fique no chão
+            direcao.y = -1f;
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 direcao.y = forcaPulo;
+                animator.SetBool("isJumping", true);
+            }
+            else
+            {
+                animator.SetBool("isJumping", false);
             }
         }
         else
         {
             direcao.y -= gravidade * Time.deltaTime;
+            animator.SetBool("isJumping", true);
         }
 
         controller.Move(direcao * Time.deltaTime);
