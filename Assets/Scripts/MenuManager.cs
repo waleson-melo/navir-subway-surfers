@@ -6,7 +6,7 @@ public class MenuManager : MonoBehaviour
     public void Jogar()
     {
         //rapaz
-        SceneManager.LoadScene("Jogo"); // nome da cena do jogo
+        SceneManager.LoadScene("SampleScene"); // nome da cena do jogo
     }
 
     public void Sair()
