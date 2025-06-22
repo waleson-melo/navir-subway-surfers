@@ -806,6 +806,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1788458628}
     m_Modifications:
+    - target: {fileID: 3258329632886023963, guid: 89216d22a64106647b134f418607ba51, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8114384756508026843, guid: 89216d22a64106647b134f418607ba51, type: 3}
       propertyPath: m_Name
       value: Jogador
@@ -874,6 +878,11 @@ PrefabInstance:
 --- !u!4 &1722602091 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8923818190621982049, guid: 89216d22a64106647b134f418607ba51, type: 3}
+  m_PrefabInstance: {fileID: 1645380351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1722602092 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3258329632886023963, guid: 89216d22a64106647b134f418607ba51, type: 3}
   m_PrefabInstance: {fileID: 1645380351}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1788458624
@@ -1008,6 +1017,7 @@ MonoBehaviour:
   gravidade: 20
   textoPontuacao: {fileID: 1434689518}
   somMoeda: {fileID: 8300000, guid: 4ded6536e77065845989b0004b67f0a9, type: 3}
+  animator: {fileID: 1722602092}
 --- !u!82 &1788458630
 AudioSource:
   m_ObjectHideFlags: 0
