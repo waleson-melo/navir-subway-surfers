@@ -1,4 +1,0 @@
-repository "SemanaNavir/SemanaNavir@4673190521417@cloud"
-  path "/"
-    br "/main"
-    co "/main"
