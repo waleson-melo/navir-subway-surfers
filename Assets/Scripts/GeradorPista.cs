@@ -9,7 +9,6 @@ public class GeradorPista : MonoBehaviour
     public Transform jogador;
     private float zUltimoTrecho;
 
-    public GameObject obstaculoPrefab;
     public GameObject moedaPrefab;
     public float chanceObstaculo = 0.3f;
     public float chanceMoeda = 0.5f;

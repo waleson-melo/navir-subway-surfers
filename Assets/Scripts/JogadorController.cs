@@ -19,7 +19,7 @@ public class JogadorController : MonoBehaviour
     public AudioClip somMoeda;
     private AudioSource audioSource;
 
-    public Animator animator;
+    //public Animator animator;
 
     void Start()
     {
@@ -59,17 +59,17 @@ public class JogadorController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 direcao.y = forcaPulo;
-                animator.SetBool("isJumping", true);
+                //animator.SetBool("isJumping", true);
             }
-            else
-            {
-                animator.SetBool("isJumping", false);
-            }
+            //else
+            //{
+            //    animator.SetBool("isJumping", false);
+            //}
         }
         else
         {
             direcao.y -= gravidade * Time.deltaTime;
-            animator.SetBool("isJumping", true);
+            //animator.SetBool("isJumping", true);
         }
 
         controller.Move(direcao * Time.deltaTime);
