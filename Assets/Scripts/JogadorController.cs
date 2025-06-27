@@ -19,7 +19,7 @@ public class JogadorController : MonoBehaviour
     public AudioClip somMoeda;
     private AudioSource audioSource;
 
-    //public Animator animator;
+    public Animator animator;
 
     void Start()
     {
@@ -59,17 +59,17 @@ public class JogadorController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 direcao.y = forcaPulo;
-                //animator.SetBool("isJumping", true);
+                animator.SetBool("isJumping", true);
             }
-            //else
-            //{
-            //    animator.SetBool("isJumping", false);
-            //}
+            else
+            {
+                animator.SetBool("isJumping", false);
+            }
         }
         else
         {
             direcao.y -= gravidade * Time.deltaTime;
-            //animator.SetBool("isJumping", true);
+            animator.SetBool("isJumping", true);
         }
 
         controller.Move(direcao * Time.deltaTime);
@@ -82,8 +82,6 @@ public class JogadorController : MonoBehaviour
             Debug.Log("Colidiu com obstáculo!");
             Time.timeScale = 1f;
             SceneManager.LoadScene("MenuInicial");
-            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            // Aqui você pode parar o jogo, reiniciar a cena, reduzir vida etc.
         }
     }
 
